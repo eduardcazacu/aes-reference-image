@@ -100,7 +100,7 @@ CONFIG_system-zynq=y
 #
 # dnf
 #
-# CONFIG_dnf is not set
+CONFIG_dnf=y
 
 #
 # e2fsprogs 
@@ -224,7 +224,7 @@ CONFIG_mtd-utils=y
 #
 # opkg 
 #
-CONFIG_opkg=y
+# CONFIG_opkg is not set
 # CONFIG_opkg-dev is not set
 # CONFIG_libopkg is not set
 # CONFIG_opkg-dbg is not set

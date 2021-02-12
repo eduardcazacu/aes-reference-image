@@ -1,5 +1,9 @@
 /include/ "system-conf.dtsi"
 / { 
+	chosen {
+        bootargs = "console=ttyPS0,115200 earlyprintk uio_pdrv_genirq.of_id=generic-uio";
+	};
+
 	usb_phy0: usb_phy@0 {
 	    compatible = "usb-nop-xceiv";
 	    #phy-cells = <0>;
@@ -15,4 +19,17 @@
 	status = "okay";
 	dr_mode = "host";
 	usb-phy = <&usb_phy0>;
+};
+
+&encoder_0 {
+	compatible = "generic-uio";
+};
+&encoder_1{
+	compatible = "generic-uio";
+};
+&pwm_0 {
+	compatible = "generic-uio";
+};
+&pwm_1{
+	compatible = "generic-uio";
 };
