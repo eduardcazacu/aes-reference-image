@@ -48,14 +48,14 @@ CONFIG_system-zynq=y
 #
 # busybox 
 #
-# CONFIG_busybox is not set
-# CONFIG_busybox-udhcpd is not set
+CONFIG_busybox=y
+CONFIG_busybox-udhcpd=y
 # CONFIG_busybox-httpd is not set
 # CONFIG_busybox-dbg is not set
 # CONFIG_busybox-inetd is not set
 # CONFIG_busybox-dev is not set
 # CONFIG_busybox-hwclock is not set
-# CONFIG_busybox-udhcpc is not set
+CONFIG_busybox-udhcpc=y
 # CONFIG_busybox-syslog is not set
 
 #
@@ -100,7 +100,7 @@ CONFIG_system-zynq=y
 #
 # dnf
 #
-CONFIG_dnf=y
+# CONFIG_dnf is not set
 
 #
 # e2fsprogs 
@@ -146,7 +146,7 @@ CONFIG_dnf=y
 #
 # i2c-tools 
 #
-# CONFIG_i2c-tools is not set
+CONFIG_i2c-tools=y
 # CONFIG_i2c-tools-dev is not set
 # CONFIG_i2c-tools-dbg is not set
 # CONFIG_i2c-tools-misc is not set
@@ -423,7 +423,7 @@ CONFIG_canutils=y
 #
 # dropbear 
 #
-# CONFIG_dropbear is not set
+CONFIG_dropbear=y
 # CONFIG_dropbear-dev is not set
 # CONFIG_dropbear-dbg is not set
 
@@ -475,7 +475,7 @@ CONFIG_canutils=y
 # CONFIG_openssh-ssh is not set
 # CONFIG_openssh-dev is not set
 # CONFIG_openssh-sftp is not set
-CONFIG_openssh-sftp-server=y
+# CONFIG_openssh-sftp-server is not set
 # CONFIG_openssh-scp is not set
 
 #
@@ -766,7 +766,7 @@ CONFIG_pciutils=y
 #
 # vim 
 #
-# CONFIG_vim is not set
+CONFIG_vim=y
 # CONFIG_vim-syntax is not set
 # CONFIG_vim-dev is not set
 # CONFIG_vim-help is not set
@@ -1983,7 +1983,7 @@ CONFIG_libusb-compat=y
 #
 # openssl 
 #
-# CONFIG_openssl is not set
+CONFIG_openssl=y
 # CONFIG_openssl-conf is not set
 # CONFIG_openssl-dbg is not set
 # CONFIG_openssl-engines is not set
@@ -2558,7 +2558,7 @@ CONFIG_packagegroup-core-boot=y
 #
 # packagegroup-core-ssh-dropbear 
 #
-CONFIG_packagegroup-core-ssh-dropbear=y
+# CONFIG_packagegroup-core-ssh-dropbear is not set
 # CONFIG_packagegroup-core-ssh-dropbear-dbg is not set
 # CONFIG_packagegroup-core-ssh-dropbear-dev is not set
 
