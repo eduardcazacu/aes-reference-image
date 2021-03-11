@@ -149,7 +149,7 @@ CONFIG_busybox-udhcpc=y
 CONFIG_i2c-tools=y
 # CONFIG_i2c-tools-dev is not set
 # CONFIG_i2c-tools-dbg is not set
-# CONFIG_i2c-tools-misc is not set
+CONFIG_i2c-tools-misc=y
 
 #
 # init-ifupdown 
@@ -415,7 +415,7 @@ CONFIG_canutils=y
 #
 # curl 
 #
-# CONFIG_curl is not set
+CONFIG_curl=y
 # CONFIG_curl-dev is not set
 # CONFIG_libcurl is not set
 # CONFIG_curl-dbg is not set
@@ -475,7 +475,7 @@ CONFIG_dropbear=y
 # CONFIG_openssh-ssh is not set
 # CONFIG_openssh-dev is not set
 # CONFIG_openssh-sftp is not set
-# CONFIG_openssh-sftp-server is not set
+CONFIG_openssh-sftp-server=y
 # CONFIG_openssh-scp is not set
 
 #
@@ -611,9 +611,9 @@ CONFIG_dropbear=y
 #
 # git 
 #
-# CONFIG_git is not set
+CONFIG_git=y
 # CONFIG_git-bash-completion is not set
-# CONFIG_gitweb is not set
+CONFIG_gitweb=y
 # CONFIG_git-perltools is not set
 # CONFIG_git-dev is not set
 # CONFIG_git-dbg is not set
@@ -908,7 +908,7 @@ CONFIG_vim=y
 #
 # make 
 #
-# CONFIG_make is not set
+CONFIG_make=y
 # CONFIG_make-dbg is not set
 # CONFIG_make-dev is not set
 
@@ -939,74 +939,74 @@ CONFIG_vim=y
 #
 # python 
 #
-# CONFIG_python is not set
-# CONFIG_python-dbg is not set
-# CONFIG_python-mailbox is not set
-# CONFIG_python-resource is not set
-# CONFIG_python-compile is not set
-# CONFIG_python-math is not set
-# CONFIG_python-difflib is not set
-# CONFIG_python-gdbm is not set
-# CONFIG_python-image is not set
-# CONFIG_python-fcntl is not set
-# CONFIG_python-2to3 is not set
-# CONFIG_python-distutils is not set
-# CONFIG_python-terminal is not set
-# CONFIG_python-profile is not set
-# CONFIG_python-mmap is not set
-# CONFIG_python-robotparser is not set
-# CONFIG_python-threading is not set
-# CONFIG_python-zlib is not set
-# CONFIG_python-pickle is not set
-# CONFIG_python-xml is not set
-# CONFIG_python-lang is not set
-# CONFIG_python-email is not set
-# CONFIG_python-contextlib is not set
-# CONFIG_python-netclient is not set
-# CONFIG_python-dev is not set
-# CONFIG_python-idle is not set
-# CONFIG_python-modules is not set
-# CONFIG_python-logging is not set
-# CONFIG_python-xmlrpc is not set
-# CONFIG_python-codecs is not set
-# CONFIG_python-stringold is not set
-# CONFIG_python-argparse is not set
-# CONFIG_python-numbers is not set
-# CONFIG_python-debugger is not set
-# CONFIG_python-html is not set
-# CONFIG_python-shell is not set
-# CONFIG_python-tkinter is not set
-# CONFIG_python-textutils is not set
-# CONFIG_python-compression is not set
-# CONFIG_python-hotshot is not set
-# CONFIG_python-core is not set
-# CONFIG_python-json is not set
-# CONFIG_python-sqlite3 is not set
-# CONFIG_python-plistlib is not set
+CONFIG_python=y
+CONFIG_python-dbg=y
+CONFIG_python-mailbox=y
+CONFIG_python-resource=y
+CONFIG_python-compile=y
+CONFIG_python-math=y
+CONFIG_python-difflib=y
+CONFIG_python-gdbm=y
+CONFIG_python-image=y
+CONFIG_python-fcntl=y
+CONFIG_python-2to3=y
+CONFIG_python-distutils=y
+CONFIG_python-terminal=y
+CONFIG_python-profile=y
+CONFIG_python-mmap=y
+CONFIG_python-robotparser=y
+CONFIG_python-threading=y
+CONFIG_python-zlib=y
+CONFIG_python-pickle=y
+CONFIG_python-xml=y
+CONFIG_python-lang=y
+CONFIG_python-email=y
+CONFIG_python-contextlib=y
+CONFIG_python-netclient=y
+CONFIG_python-dev=y
+CONFIG_python-idle=y
+CONFIG_python-modules=y
+CONFIG_python-logging=y
+CONFIG_python-xmlrpc=y
+CONFIG_python-codecs=y
+CONFIG_python-stringold=y
+CONFIG_python-argparse=y
+CONFIG_python-numbers=y
+CONFIG_python-debugger=y
+CONFIG_python-html=y
+CONFIG_python-shell=y
+CONFIG_python-tkinter=y
+CONFIG_python-textutils=y
+CONFIG_python-compression=y
+CONFIG_python-hotshot=y
+CONFIG_python-core=y
+CONFIG_python-json=y
+CONFIG_python-sqlite3=y
+CONFIG_python-plistlib=y
 # CONFIG_python-curses is not set
-# CONFIG_python-misc is not set
-# CONFIG_python-tests is not set
-# CONFIG_python-netserver is not set
-# CONFIG_python-multiprocessing is not set
-# CONFIG_python-syslog is not set
-# CONFIG_python-pprint is not set
-# CONFIG_python-pkgutil is not set
-# CONFIG_python-mime is not set
+CONFIG_python-misc=y
+CONFIG_python-tests=y
+CONFIG_python-netserver=y
+CONFIG_python-multiprocessing=y
+CONFIG_python-syslog=y
+CONFIG_python-pprint=y
+CONFIG_python-pkgutil=y
+CONFIG_python-mime=y
 # CONFIG_libpython2 is not set
-# CONFIG_python-smtpd is not set
-# CONFIG_python-pydoc is not set
-# CONFIG_python-bsddb is not set
-# CONFIG_python-re is not set
-# CONFIG_python-ctypes is not set
-# CONFIG_python-compiler is not set
-# CONFIG_python-unittest is not set
-# CONFIG_python-db is not set
-# CONFIG_python-io is not set
-# CONFIG_python-unixadmin is not set
-# CONFIG_python-datetime is not set
-# CONFIG_python-subprocess is not set
-# CONFIG_python-audio is not set
-# CONFIG_python-crypt is not set
+CONFIG_python-smtpd=y
+CONFIG_python-pydoc=y
+CONFIG_python-bsddb=y
+CONFIG_python-re=y
+CONFIG_python-ctypes=y
+CONFIG_python-compiler=y
+CONFIG_python-unittest=y
+CONFIG_python-db=y
+CONFIG_python-io=y
+CONFIG_python-unixadmin=y
+CONFIG_python-datetime=y
+CONFIG_python-subprocess=y
+CONFIG_python-audio=y
+CONFIG_python-crypt=y
 
 #
 # python-nose 
@@ -2263,7 +2263,7 @@ CONFIG_udev-extraconf=y
 #
 # gcc-runtime 
 #
-# CONFIG_libstdcPLUSPLUS is not set
+CONFIG_libstdcPLUSPLUS=y
 # CONFIG_libstdcPLUSPLUS-dev is not set
 
 #
@@ -2286,10 +2286,10 @@ CONFIG_udev-extraconf=y
 #
 # gdb 
 #
-# CONFIG_gdb is not set
+CONFIG_gdb=y
 # CONFIG_gdb-dbg is not set
 # CONFIG_gdb-dev is not set
-# CONFIG_gdbserver is not set
+CONFIG_gdbserver=y
 
 #
 # glib-2.0 
@@ -2304,7 +2304,7 @@ CONFIG_udev-extraconf=y
 #
 # glibc 
 #
-# CONFIG_glibc is not set
+CONFIG_glibc=y
 # CONFIG_glibc-dev is not set
 # CONFIG_glibc-dbg is not set
 # CONFIG_ldd is not set
@@ -3880,7 +3880,7 @@ CONFIG_wpa-supplicant-cli=y
 #
 # packagegroup-petalinux-python-modules 
 #
-# CONFIG_packagegroup-petalinux-python-modules is not set
+CONFIG_packagegroup-petalinux-python-modules=y
 # CONFIG_packagegroup-petalinux-python-modules-dbg is not set
 # CONFIG_packagegroup-petalinux-python-modules-dev is not set
 

@@ -86,6 +86,10 @@ $petalinux-package --boot --fsbl images/linux/zynq_fsbl.elf --fpga images/linux/
 ```
 # Boot
 * Compile and package image or pick one from the [releases tab](https://github.com/eduardcazacu/aes-reference-image/releases)
-* Load image.ub and BOOT.BIN on the sd card
+* Load image.ub and BOOT.BIN on the sd card's BOOT partition
+* (If the release requires it) unzip the rootfs and load it on the rootfs SD card partition
+```bash
+$sudo tar xvf rootfs.tar.gz -C /media/rootfs
+```
 * power up the Zybo
 * login: root, pwd: root
