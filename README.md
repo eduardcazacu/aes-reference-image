@@ -84,6 +84,11 @@ udhcpc -i wlan0
 ```bash
 $petalinux-package --boot --fsbl images/linux/zynq_fsbl.elf --fpga images/linux/system.bit --u-boot --force
 ```
+# Preparing SD card
+If SD card rootfs is desired (for persistent storage), the SD card should pe partitioned and formatted as follows:
+1. 64MB FAT32 partition with 4MB of freee space proceeding. Label: BOOT
+2. ext4 partition spanning the rest of the SD card. Label :rootfs
+
 # Boot
 * Compile and package image or pick one from the [releases tab](https://github.com/eduardcazacu/aes-reference-image/releases)
 * Load image.ub and BOOT.BIN on the sd card's BOOT partition
