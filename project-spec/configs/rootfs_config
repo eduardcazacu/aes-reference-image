@@ -1172,11 +1172,11 @@ CONFIG_run-postinsts=y
 #
 # boost 
 #
-# CONFIG_boost is not set
+CONFIG_boost=y
 # CONFIG_boost-random is not set
 # CONFIG_boost-regex is not set
-# CONFIG_boost-atomic is not set
-# CONFIG_boost-thread is not set
+CONFIG_boost-atomic=y
+CONFIG_boost-thread=y
 # CONFIG_boost-serialization is not set
 # CONFIG_boost-filesystem is not set
 # CONFIG_boost-test is not set
@@ -1987,10 +1987,10 @@ CONFIG_openssl=y
 # CONFIG_openssl-conf is not set
 # CONFIG_openssl-dbg is not set
 # CONFIG_openssl-engines is not set
-# CONFIG_libcrypto is not set
+CONFIG_libcrypto=y
 # CONFIG_openssl-dev is not set
 # CONFIG_openssl-misc is not set
-# CONFIG_libssl is not set
+CONFIG_libssl=y
 
 #
 # open-amp 
@@ -2089,7 +2089,7 @@ CONFIG_openssl=y
 #
 # zlib 
 #
-# CONFIG_zlib is not set
+CONFIG_zlib=y
 # CONFIG_zlib-dbg is not set
 # CONFIG_zlib-dev is not set
 
@@ -3939,12 +3939,69 @@ CONFIG_imagefeature-hwcodecs=y
 #
 # apps 
 #
+CONFIG_cpprest=y
 CONFIG_gpio-demo=y
 CONFIG_peekpoke=y
 
 #
 # user packages 
 #
+# CONFIG_catkin is not set
+# CONFIG_cmake-modules is not set
+# CONFIG_common-msgs is not set
+# CONFIG_cpp-common is not set
+# CONFIG_cv-bridge is not set
+# CONFIG_dynamic-reconfigure is not set
+# CONFIG_gencpp is not set
+# CONFIG_genmsg is not set
+# CONFIG_gennodejs is not set
+# CONFIG_genpy is not set
+# CONFIG_geometry-msgs is not set
+# CONFIG_message-filters is not set
+# CONFIG_message-generation is not set
+# CONFIG_message-runtime is not set
+# CONFIG_mk is not set
+# CONFIG_ros is not set
+# CONFIG_ros-comm is not set
+# CONFIG_ros-environment is not set
+# CONFIG_rosbag is not set
+# CONFIG_rosbag-storage is not set
+# CONFIG_rosbash is not set
+# CONFIG_rosboost-cfg is not set
+# CONFIG_rosbuild is not set
+# CONFIG_rosclean is not set
+# CONFIG_rosconsole is not set
+# CONFIG_rosconsole-bridge is not set
+# CONFIG_roscpp is not set
+# CONFIG_roscpp-core is not set
+# CONFIG_roscpp-serialization is not set
+# CONFIG_roscpp-traits is not set
+# CONFIG_roscreate is not set
+# CONFIG_rosgraph is not set
+# CONFIG_rosgraph-msgs is not set
+# CONFIG_roslang is not set
+# CONFIG_roslaunch is not set
+# CONFIG_roslib is not set
+# CONFIG_roslz4 is not set
+# CONFIG_rosmake is not set
+# CONFIG_rosmaster is not set
+# CONFIG_rosmsg is not set
+# CONFIG_rosnode is not set
+# CONFIG_rosout is not set
+# CONFIG_rospack is not set
+# CONFIG_rosparam is not set
+# CONFIG_rospy is not set
+# CONFIG_rosservice is not set
+# CONFIG_rostest is not set
+# CONFIG_rostime is not set
+# CONFIG_rostopic is not set
+# CONFIG_rosunit is not set
+# CONFIG_roswtf is not set
+# CONFIG_sensor-msgs is not set
+# CONFIG_std-msgs is not set
+# CONFIG_std-srvs is not set
+# CONFIG_topic-tools is not set
+# CONFIG_xmlrpcpp is not set
 
 #
 # PetaLinux RootFS Settings
