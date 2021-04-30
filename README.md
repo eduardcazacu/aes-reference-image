@@ -6,18 +6,18 @@ Embedded Linux OS image for Zyboz Z7 designed for the Fontys EEE Advanced Embedd
 ## Working
 * Networking
 * WiFi (with USB adapter)
+* Persistent storage
 
 ## Untested
 * Device Tree Overlay
 * PWM and Encoder PL modules
+* XADC
+* Audio monitor firmare by [Tijntj3](https://github.com/Tijntj3/Zybo-Z7_Audiomonitor)
 
 ## Not Implemented 
-* XADC
-* Audio processor hardware and firmare by [Tijntj3](https://github.com/Tijntj3/Zybo-Z7_Audiomonitor)
 * ROS
 * Xilinx SDK toolchain
 * Zybo Z7-10 version
-* Persistent storage
 
 # Usage
 ## Access

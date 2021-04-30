@@ -3939,6 +3939,7 @@ CONFIG_imagefeature-hwcodecs=y
 #
 # apps 
 #
+CONFIG_audiomonitor=y
 CONFIG_cpprest=y
 CONFIG_gpio-demo=y
 CONFIG_peekpoke=y

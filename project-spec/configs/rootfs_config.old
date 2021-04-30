@@ -1175,8 +1175,8 @@ CONFIG_run-postinsts=y
 CONFIG_boost=y
 # CONFIG_boost-random is not set
 # CONFIG_boost-regex is not set
-# CONFIG_boost-atomic is not set
-# CONFIG_boost-thread is not set
+CONFIG_boost-atomic=y
+CONFIG_boost-thread=y
 # CONFIG_boost-serialization is not set
 # CONFIG_boost-filesystem is not set
 # CONFIG_boost-test is not set
@@ -1987,10 +1987,10 @@ CONFIG_openssl=y
 # CONFIG_openssl-conf is not set
 # CONFIG_openssl-dbg is not set
 # CONFIG_openssl-engines is not set
-# CONFIG_libcrypto is not set
+CONFIG_libcrypto=y
 # CONFIG_openssl-dev is not set
 # CONFIG_openssl-misc is not set
-# CONFIG_libssl is not set
+CONFIG_libssl=y
 
 #
 # open-amp 
