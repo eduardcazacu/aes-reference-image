@@ -4,6 +4,9 @@ IMAGE_INSTALL_append = " peekpoke"
 IMAGE_INSTALL_append = " gpio-demo"
 IMAGE_INSTALL_append = " audiomonitor"
 
+#meta-xilinx-tools:
+IMAGE_INSTALL_append = " fpga-manager-script"
+
 #ROS:
 IMAGE_INSTALL_append = " catkin"
 IMAGE_INSTALL_append = " cmake-modules"

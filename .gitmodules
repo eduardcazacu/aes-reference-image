@@ -1,3 +1,12 @@
 [submodule "project-spec/meta-ros"]
 	path = project-spec/meta-ros
 	url = https://github.com/ros/meta-ros.git
+[submodule "project-spec/meta-xilinx-tools"]
+	path = project-spec/meta-xilinx-tools
+	url = https://github.com/Xilinx/meta-xilinx-tools.git
+[submodule "device-tree-xlnx"]
+	path = device-tree-xlnx
+	url = https://github.com/Xilinx/device-tree-xlnx.git
+[submodule "dtc"]
+	path = dtc
+	url = https://git.kernel.org/pub/scm/utils/dtc/dtc.git

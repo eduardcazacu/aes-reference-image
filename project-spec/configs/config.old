@@ -181,7 +181,8 @@ CONFIG_SUBSYSTEM_DEVICETREE_FLAGS=""
 #
 # FPGA Manager
 #
-# CONFIG_SUBSYSTEM_FPGA_MANAGER is not set
+CONFIG_SUBSYSTEM_FPGA_MANAGER=y
+CONFIG_FPGA_HW_PATH="${proot}/hdf/"
 
 #
 # u-boot Configuration
@@ -243,7 +244,7 @@ CONFIG_PRE_MIRROR_URL="http://petalinux.xilinx.com/sswreleases/rel-v${PETALINUX_
 # Default sstate feeds ${PETALINUX}/components/yocto always added
 #
 CONFIG_YOCTO_LOCAL_SSTATE_FEEDS_URL=""
-CONFIG_YOCTO_ENABLE_DEBUG_TWEAKS=y
+# CONFIG_YOCTO_ENABLE_DEBUG_TWEAKS is not set
 CONFIG_YOCTO_NETWORK_SSTATE_FEEDS=y
 
 #
@@ -255,9 +256,6 @@ CONFIG_YOCTO_NETWORK_SSTATE_FEEDS_URL="http://petalinux.xilinx.com/sswreleases/r
 #
 # User Layers
 #
-CONFIG_USER_LAYER_0=""
-
-
-
-
+CONFIG_USER_LAYER_0="${proot}/project-spec/meta-xilinx-tools"
+CONFIG_USER_LAYER_1=""
 CONFIG_SUBSYSTEM_BOOTARGS_GENERATED="console=ttyPS0,115200 earlyprintk root=/dev/mmcblk0p2 rw rootwait"

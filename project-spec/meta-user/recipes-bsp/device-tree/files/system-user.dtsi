@@ -10,10 +10,29 @@
 		reg = <0xe0002000 0x1000>;
 		view-port=<0x170>;
 		drv-vbus;
-	};	
+	};
 
 };
 
+
+&xadc_wiz_0 {
+	xlnx,channels {
+		#address-cells = <1>;
+		#size-cells = <0>;
+		channelJA4@7 {
+			reg = <7>;
+		};
+		channelJA2@8 {
+			reg = <8>;
+		};
+		channelJA1@15 {
+			reg = <15>;
+		};
+		channelJA3@16 {
+			reg = <16>;
+		};
+	};
+};
  
 &usb0 {
 	compatible = "xlnx,zynq-usb-2.20.a", "chipidea,usb2";

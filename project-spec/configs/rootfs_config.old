@@ -3939,6 +3939,7 @@ CONFIG_imagefeature-hwcodecs=y
 #
 # apps 
 #
+CONFIG_audiomonitor=y
 CONFIG_cpprest=y
 CONFIG_gpio-demo=y
 CONFIG_peekpoke=y
@@ -3952,6 +3953,7 @@ CONFIG_peekpoke=y
 # CONFIG_cpp-common is not set
 # CONFIG_cv-bridge is not set
 # CONFIG_dynamic-reconfigure is not set
+# CONFIG_fpga-manager-script is not set
 # CONFIG_gencpp is not set
 # CONFIG_genmsg is not set
 # CONFIG_gennodejs is not set
