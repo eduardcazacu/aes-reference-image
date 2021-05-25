@@ -82,7 +82,7 @@ udhcpc -i wlan0
 
 # Packaging image
 ```bash
-$petalinux-package --boot --fsbl images/linux/zynq_fsbl.elf --fpga images/linux/system.bit --u-boot --force
+$ petalinux-package --boot --fsbl images/linux/zynq_fsbl.elf --fpga images/linux/system.bit --u-boot --force
 ```
 # Preparing the SD card
 If SD card rootfs is desired (for persistent storage), the SD card should pe partitioned and formatted as follows:
@@ -94,7 +94,17 @@ If SD card rootfs is desired (for persistent storage), the SD card should pe par
 * Load image.ub and BOOT.BIN on the sd card's BOOT partition
 * (If the release requires it) unzip the rootfs and load it on the rootfs SD card partition
 ```bash
-$sudo tar xvf rootfs.tar.gz -C /media/rootfs
+$ sudo tar xvf rootfs.tar.gz -C /media/<username>/rootfs
 ```
 * power up the Zybo
 * login: root, pwd: root
+
+# Audio Monitor functionality (Device Tree Overaly)
+To enable the non-default Audio Monitor functionality of this image, Device Tree Overlay (DTO) is used. With DTO, the necessary fpga bitstream and device tree fragment is loaded. More information on this can be found on [this Xilinx confluence page](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841645/Solution+Zynq+PL+Programming+With+FPGA+Manager).
+
+## Usage
+
+
+## Development
+For how to generate a .DTBO and .bit file read the [README.md in ./DTO/](DTO/README.md)
+
