@@ -7,11 +7,11 @@ Embedded Linux OS image for Zyboz Z7 designed for the Fontys EEE Advanced Embedd
 * Networking
 * WiFi (with USB adapter)
 * Persistent storage
+* XADC
 
 ## Untested
 * Device Tree Overlay
 * PWM and Encoder PL modules
-* XADC
 * Audio monitor firmare by [Tijntj3](https://github.com/Tijntj3/Zybo-Z7_Audiomonitor)
 
 ## Not Implemented 
@@ -103,7 +103,7 @@ $ sudo tar xvf rootfs.tar.gz -C /media/<username>/rootfs
 To enable the non-default Audio Monitor functionality of this image, Device Tree Overlay (DTO) is used. With DTO, the necessary fpga bitstream and device tree fragment is loaded. More information on this can be found on [this Xilinx confluence page](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841645/Solution+Zynq+PL+Programming+With+FPGA+Manager).
 
 ## Usage
-
+No working flow yet.
 
 ## Development
 For how to generate a .DTBO and .bit file read the [README.md in ./DTO/](DTO/README.md)
