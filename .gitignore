@@ -9,3 +9,4 @@ images/linux/
 meta-plnx-generated/
 .Xil/
 build/
+.release
