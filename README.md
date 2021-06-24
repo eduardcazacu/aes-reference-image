@@ -9,9 +9,9 @@ Embedded Linux OS image for Zyboz Z7 designed for the Fontys EEE Advanced Embedd
 * Persistent storage
 * XADC
 * Audio monitor firmare by [Tijntj3](https://github.com/Tijntj3/Zybo-Z7_Audiomonitor) (A bug with the fft library still need to be fixed)
+* Device Tree Overlay
 
 ## Untested
-* Device Tree Overlay
 * PWM and Encoder PL modules
 * Z7-10 images
 
@@ -28,7 +28,7 @@ If SD card rootfs is desired (for persistent storage), the SD card should pe par
 2. ext4 partition spanning the rest of the SD card. Label :rootfs
 
 ## Boot
-* Build an image from source or pick one from the [releases tab](https://github.com/eduardcazacu/aes-reference-image/releases). Make sure to choose the correct board (Z7-10 or Z7-20) and desired FPGA bitstream (default or audio monitor).
+* Build an image from source or pick one from the [releases tab](https://github.com/eduardcazacu/aes-reference-image/releases). Make sure to choose the correct board (Z7-10 or Z7-20)
 * Load image.ub and BOOT.BIN on the sd card's BOOT partition
 * (If the release requires it) unzip the rootfs and load it on the rootfs SD card partition
 ```bash
@@ -105,8 +105,6 @@ $ petalinux-config --get-hw-description=<path-to-hdf>
 
 for example, for the default z7-20 hdf, use the following path (from project root): ./hdf/default/zybo-z7-20/
 
-## device tree
-Some changes to the device tree are required. Depending on which hdf has been used, copy the contents of project-spec/meta-user/recipes-bsp/device-tree/files/system-user-*.dtsi to project-spec/meta-user/recipes-bsp/device-tree/files/system-user.dtsi
 
 # Packaging image
 ```bash
@@ -187,12 +185,20 @@ The audio montor FPGA image contains the necessary hardware for using the Zybo a
 
 
 # Audio Monitor functionality (Device Tree Overaly)
-DTO flow not established yet. Use the prebuilt Audio monitor image.
-
 To enable the non-default Audio Monitor functionality of this image, Device Tree Overlay (DTO) is used. With DTO, the necessary fpga bitstream and device tree fragment is loaded. More information on this can be found on [this Xilinx confluence page](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841645/Solution+Zynq+PL+Programming+With+FPGA+Manager).
 
 ## Usage
-No working flow yet.
+use fpgautil to load the bitstream and DTO:
+```bash
+fpgautil -b /lib/firmware/miniproject_z7-20/miniproject_top.bit.bin -o /lib/firmware/miniproject_z7-20/system-user.dtbo -f Full
+```
+
+to reset the live tree to default:
+```bash
+cd /configfs/device-tree/overlays
+rmdir full
+```
+
 
 ## Development
 For how to generate a .DTBO and .bit file read the [README.md in ./DTO/](DTO/README.md)

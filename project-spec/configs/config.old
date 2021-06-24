@@ -175,14 +175,15 @@ CONFIG_SUBSYSTEM_MACHINE_NAME="template"
 CONFIG_SUBSYSTEM_BOOTARGS_AUTO=y
 CONFIG_SUBSYSTEM_BOOTARGS_EARLYPRINTK=y
 
-CONFIG_SUBSYSTEM_DEVICETREE_FLAGS="-@"
+CONFIG_SUBSYSTEM_DEVICETREE_FLAGS="-b 0 -@"
 # CONFIG_SUBSYSTEM_DTB_OVERLAY is not set
 # CONFIG_SUBSYSTEM_REMOVE_PL_DTB is not set
 
 #
 # FPGA Manager
 #
-# CONFIG_SUBSYSTEM_FPGA_MANAGER is not set
+CONFIG_SUBSYSTEM_FPGA_MANAGER=y
+CONFIG_FPGA_HW_PATH="${proot}/hdf/audio/zybo-z7-20/;${proot}/hdf/audio/zybo-z7-10"
 
 #
 # u-boot Configuration
@@ -258,8 +259,4 @@ CONFIG_YOCTO_NETWORK_SSTATE_FEEDS_URL="http://petalinux.xilinx.com/sswreleases/r
 #
 CONFIG_USER_LAYER_0="${proot}/project-spec/meta-xilinx-tools"
 CONFIG_USER_LAYER_1=""
-
-
-
-
 CONFIG_SUBSYSTEM_BOOTARGS_GENERATED="console=ttyPS0,115200 earlyprintk root=/dev/mmcblk0p2 rw rootwait"

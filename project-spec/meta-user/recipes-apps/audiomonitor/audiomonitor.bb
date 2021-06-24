@@ -22,7 +22,7 @@ do_install() {
 	     install -d ${D}${bindir}
 	     install -m 0755 audiomonitor ${D}${bindir}
 	     mkdir -p ${D}/var/www
-             cp -R www_Z7-20/* ${D}/var/www
+         cp -R www_Z7-20/* ${D}/var/www
 }
 
 FILES_${PN} += "/var/www"

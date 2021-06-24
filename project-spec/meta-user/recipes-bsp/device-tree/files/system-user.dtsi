@@ -14,42 +14,9 @@
 
 };
 
-
-&xadc_wiz_0 {
-	xlnx,channels {
-		#address-cells = <1>;
-		#size-cells = <0>;
-		channelJA4@7 {
-			reg = <7>;
-		};
-		channelJA2@8 {
-			reg = <8>;
-		};
-		channelJA1@15 {
-			reg = <15>;
-		};
-		channelJA3@16 {
-			reg = <16>;
-		};
-	};
-};
- 
 &usb0 {
 	compatible = "xlnx,zynq-usb-2.20.a", "chipidea,usb2";
 	status = "okay";
 	dr_mode = "host";
 	usb-phy = <&usb_phy0>;
-};
-
-&encoder_0 {
-	compatible = "generic-uio";
-};
-&encoder_1{
-	compatible = "generic-uio";
-};
-&pwm_0 {
-	compatible = "generic-uio";
-};
-&pwm_1{
-	compatible = "generic-uio";
 };
