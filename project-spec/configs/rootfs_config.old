@@ -3944,7 +3944,7 @@ CONFIG_audiomonitor-local=y
 CONFIG_cpprest=y
 CONFIG_gpio-demo=y
 CONFIG_peekpoke=y
-# CONFIG_system-user-dto is not set
+CONFIG_system-user-dto=y
 
 #
 # modules 
