@@ -1,0 +1,2 @@
+This is a static version of the Audio Monitor [application by Tijn] (https://github.com/Tijntj3/Zybo-Z7_Audiomonitor).
+This is in a known working state and independedent from changes made upstream. For latest version, use the audiomonitor recipe.

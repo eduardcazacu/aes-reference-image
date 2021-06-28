@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+    <div class="VDiv">
+        <p class="text" id="Title">Audio Monitor</p>
+    </div>
+    <div id="menuHead">
+        <input type="checkbox" class="btncontrol" id="menuControl" onclick="showMenu()"/>
+        <label for="menuControl">
+            <img id="menuImg">
+        </label>
+    </div>
+    <div id="mVDiv">
+        <div id="menuBody">
+            <div id="menuDiv">
+                <input type="checkbox" class="btncontrol" id="muteControl" onclick="mute()"/>
+                <label class="option" id="mute" for="muteControl">
+                    <p class="text" id="muteText">Unmute</p>
+                </label>
+                <input type="checkbox" class="btncontrol" id="channelControl" onclick="channel()"/>
+                <label class="option" id="channel" for="channelControl">
+                    <p class="text" id="channelText">Right</p>
+                </label>
+                <input type="checkbox" class="btncontrol" id="distortionControl" onclick="distortion()"/>
+                <label class="option" id="distortion" for="distortionControl">
+                    <p class="text" id="distortionText">Distortion</p>
+                </label>
+                <input type="checkbox" class="btncontrol" id="octaverControl" onclick="octaver()"/>
+                <label class="option" id="octaver" for="octaverControl">
+                    <p class="text" id="octaverText">Octaver</p>
+                </label>
+                <input type="checkbox" class="btncontrol" id="tremoloControl" onclick="tremolo()"/>
+                <label class="option" id="tremolo" for="tremoloControl">
+                    <p class="text" id="tremoloText">Tremolo</p>
+                </label>
+                <input type="checkbox" class="btncontrol" id="delayControl" onclick="delay()"/>
+                <label class="option" id="delay" for="delayControl">
+                    <p class="text" id="delayText">Delay</p>
+                </label>
+                <label class="slider" id="scale" for="scaleControl">
+                    <p class="text" id="scaleText">Bar scale</p>
+                </label>
+                <input type="range" min="0" max="63" value="10" class="sldcontrol" id="scaleControl" onmouseup="scale()"/>
+                <label class="slider" id="ADC" for="ADCControl">
+                    <p class="text" id="channelText">ADC Volume</p>
+                </label>
+                <input type="range" min="0" max="63" value="10" class="sldcontrol" id="ADCControl" onmouseup="ADC()"/>
+                <label class="slider" id="DAC" for="DACControl">
+                    <p class="text" id="channelText">DAC Volume</p>
+                </label>
+                <input type="range" min="0" max="127" value="121" class="sldcontrol" id="DACControl" onmouseup="DAC()"/>
+            </div>
+        </div>
+        <div class="mDivSpacer"></div>
+        <div id="data">
+            <div class="bars">
+                <div class="freq" id="freq0"></div>
+                <div class="freq" id="freq1"></div>
+                <div class="freq" id="freq2"></div>
+                <div class="freq" id="freq3"></div>
+                <div class="freq" id="freq4"></div>
+                <div class="freq" id="freq5"></div>
+                <div class="freq" id="freq6"></div>
+                <div class="freq" id="freq7"></div>
+                <div class="freq" id="freq8"></div>
+                <div class="freq" id="freq9"></div>
+                <div class="freq" id="freq10"></div>
+                <div class="freq" id="freq11"></div>
+                <div class="freq" id="freq12"></div>
+                <div class="freq" id="freq13"></div>
+                <div class="freq" id="freq14"></div>
+                <div class="freq" id="freq15"></div>
+            </div>
+            <div class="bars">
+                <div class="freq" id="freq16"></div>
+                <div class="freq" id="freq17"></div>
+                <div class="freq" id="freq18"></div>
+                <div class="freq" id="freq19"></div>
+                <div class="freq" id="freq20"></div>
+                <div class="freq" id="freq21"></div>
+                <div class="freq" id="freq22"></div>
+                <div class="freq" id="freq23"></div>
+                <div class="freq" id="freq24"></div>
+                <div class="freq" id="freq25"></div>
+                <div class="freq" id="freq26"></div>
+                <div class="freq" id="freq27"></div>
+                <div class="freq" id="freq28"></div>
+                <div class="freq" id="freq29"></div>
+                <div class="freq" id="freq30"></div>
+                <div class="freq" id="freq31"></div>
+            </div>
+        </div>
+        <div class="mDivSpacer"></div>
+    </div>
+    <div class="VDiv">
+        <a class="text" id="Credits" href="https://github.com/Tijntj3">
+            Tijntj3
+        </a>
+    </div>
+</body>
+</html> 

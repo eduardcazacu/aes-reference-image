@@ -1,0 +1,2 @@
+This application adds the precompiled system-user.dtbo files to the corresponding /lib/firmware directories 
+to be used for Device Tree overlay with the base or audio monitor images

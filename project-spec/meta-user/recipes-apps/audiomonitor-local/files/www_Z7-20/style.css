@@ -1,0 +1,244 @@
+body {
+    margin: 0;
+    background-color: #252526;
+  }
+
+.VDiv {
+    margin: 0;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+#mVDiv {
+    margin: 0;
+    height: 80vh;
+    display: flex;
+}
+
+.mDivSpacer {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 5vw;
+}
+
+#menuHead {
+    margin: 0;
+    height: 0vh;
+    display: flex;
+}
+
+#menuBody {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: -0.5vh;
+    height: 65vh;
+    display: flex;
+    width: 0px;
+    min-width: 0px;
+    transition: all 0.5s ease;
+    background-color: #1e1e1e;
+    border-style: solid solid solid none;
+    border-color: #9cdcfe;
+    border-width: 0.5vh;
+}
+
+#menuImg {
+    background-image: url(cog.png);
+    background-color: transparent;
+    background-size: 3vh 3vh;
+    padding: 1.5vh 1.5vh;
+    margin-top: -5vh;
+    margin-bottom: 0;
+    margin-left: 1vw;
+    border: none;
+    transition: all 0.5s ease;
+    transform: rotate(0deg);
+}
+
+#menuImg:hover {
+    background-size: 3.5vh 3.5vh;
+    padding: 1.75vh 1.75vh;
+}
+
+#menuControl:checked + label > #menuImg {
+    transform: rotate(-90deg);
+}
+
+#menuDiv {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: -20vw;
+    transition: all 0.5s ease;
+}
+
+.btncontrol {
+    margin: 0;
+    display: none;
+}
+
+.sldcontrol {
+    vertical-align: top;
+    margin-top: 1.5vh;
+    margin-bottom: 0vh;
+    -webkit-appearance: none;
+    width: 10vh;
+    height: 0.5vh;
+    background:#585858;
+    outline: none;
+    transition: all 0.2s ease;
+}
+  
+.sldcontrol:hover {
+    background:#888888;
+}
+  
+.sldcontrol::-webkit-slider-thumb {
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0.5vh;
+    height: 1.5vh;
+    background: #9cdcfe;
+    border-radius: 0%;
+    border-style: none;
+    cursor: pointer;
+}
+  
+.sldcontrol::-moz-range-thumb {
+    margin: 0;
+    width: 0.5vh;
+    height: 1.5vh;
+    background: #9cdcfe;
+    border-radius: 0%;
+    border-style: none;
+    cursor: pointer;
+}
+
+.option {
+    margin-top: 2vh;
+    margin-bottom: 0vh;
+    display: flex;
+    width: 10vh;
+    height: 5vh;
+    border-style: solid;
+    border-color: #9cdcfe;
+    border-width: 0.5vh;
+    align-self: center;
+    line-height: 5vh;
+    transition: all 0.2s ease;
+}
+
+.slider {
+    margin-top: 1.5vh;
+    margin-bottom: 0vh;
+    display: flex;
+    align-self: center;  
+}
+
+#mute:hover {
+    background-color: #9cdcfe;
+}
+
+#mute:hover > #muteText {
+    color: #1e1e1e;
+}
+
+#mode:hover {
+    background-color: #9cdcfe;
+}
+
+#mode:hover > #modeText {
+    color: #1e1e1e;
+}
+
+#channel:hover {
+    background-color: #9cdcfe;
+}
+
+#channel:hover > #channelText {
+    color: #1e1e1e;
+}
+
+#distortion:hover {
+    background-color: #9cdcfe;
+}
+
+#distortion:hover > #distortionText {
+    color: #1e1e1e;
+}
+
+#octaver:hover {
+    background-color: #9cdcfe;
+}
+
+#octaver:hover > #octaverText {
+    color: #1e1e1e;
+}
+
+#tremolo:hover {
+    background-color: #9cdcfe;
+}
+
+#tremolo:hover > #tremoloText {
+    color: #1e1e1e;
+}
+
+#delay:hover {
+    background-color: #9cdcfe;
+}
+
+#delay:hover > #delayText {
+    color: #1e1e1e;
+}
+
+#data {
+    margin: auto;
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.bars {
+    margin: 0;
+    height: 40vh;
+    display: flex;
+}
+
+.freq {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: flex-end;
+    background-color: #9cdcfe;
+    width: 2.5vw;
+    transition: all 0.05s ease;
+}
+
+.text {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1.5vh;
+    color: #9cdcfe;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+#Title {
+    font-size: 4vh;
+}
+
+#Title:hover {
+    font-size: 6vh;
+}
+
+#Credits:hover {
+    font-size: 3vh;
+}
