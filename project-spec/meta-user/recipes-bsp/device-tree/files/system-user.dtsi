@@ -20,3 +20,10 @@
 	dr_mode = "host";
 	usb-phy = <&usb_phy0>;
 };
+
+&i2c0 {
+	ssm2603: ssm2603@1a{
+		compatible = "adi,ssm2603";
+		reg = <0x1a>;
+	};
+};

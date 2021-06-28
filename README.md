@@ -8,7 +8,7 @@ Embedded Linux OS image for Zyboz Z7 designed for the Fontys EEE Advanced Embedd
 * WiFi (with USB adapter)
 * Persistent storage
 * XADC
-* Audio monitor firmare by [Tijntj3](https://github.com/Tijntj3/Zybo-Z7_Audiomonitor) (A bug with the fft library still need to be fixed)
+* Audio monitor firmare by [Tijntj3](https://github.com/Tijntj3/Zybo-Z7_Audiomonitor) (A bug with the fft library still needs to be fixed)
 * Device Tree Overlay
 
 ## Untested
@@ -17,6 +17,9 @@ Embedded Linux OS image for Zyboz Z7 designed for the Fontys EEE Advanced Embedd
 
 ## Not Implemented 
 * ROS
+
+## TODO
+* Nicely packaged .img files for Windows users to flash on SD cards without needing to partition the SD card first
 
 
 # Usage
@@ -102,8 +105,9 @@ Before building, when configuring the project, make sure to select the desired h
 ```bash
 $ petalinux-config --get-hw-description=<path-to-hdf>
 ```
-
 for example, for the default z7-20 hdf, use the following path (from project root): ./hdf/default/zybo-z7-20/
+
+The master-z7-20 will have the ./hdf/default/zybo-z7-20/ configuration preselected.
 
 
 # Packaging image
@@ -115,7 +119,7 @@ The package BOOT.bin, image.ub and rootfs.tar.gz will be available in ./images/l
 
 # FPGA Firmware
 
-The pre-built images are available with two different FPGA firmwares:
+The pre-built images are available with two different FPGA firmwares (selectable through DTO)
 
 ## Default
 
@@ -125,6 +129,15 @@ Contains:
 * Two Encoder Controllers
 * GPIO Controller (Buttons, switches, LEDs)
 * XADC
+
+### Enabling
+To use the hardware, the the device tree needs to be changed using Device Tree Overlay:
+
+```bash
+fpgautil -b /lib/firmware/top_level_wrapper_z7-20/top_level_wrapper.bit.bin -o /lib/firmware/top_level_wrapper_z7-20/system-user-default-z7-20.dtbo -f Full
+```
+
+Note: if using Z7-10 use the correct directories and file names.
 
 ### PWM and Encoder Controllers
 Useful for robotics applications. 
@@ -181,17 +194,46 @@ The XADC is mapped to PMod JA.
 ## Audio Monitor
 The audio montor FPGA image contains the necessary hardware for using the Zybo audio CODEC.
 
+# Device Tree Overlay (DTO)
+Custom FPGA bitstreams and device trees can be used with this image. Only full bistream overwrite is supported.
 
+A Xilinx guide is provided [here](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841645/Solution+Zynq+PL+Programming+With+FPGA+Manager).
 
+The steps for using DTO are:
+1. Generate bitstream in vivado
+2. Export hardware (for Xilinx SDK) and also a .hdf file
+3. Generate .bif file in Xilinx SDK
+4. Get a byte-swapped .bin file from the .bif file using bootgen:
+```bash
+bootgen -image Full_Bitstream.bif -arch zynq -process_bitstream bin
+```
+3. Get the device tree file from the .hdf. For this, see steps in the [DTO/ README.md](DTO/README.md).
+4. Edit the pl.dtsi device tree with your changes (the ones usually found in system-user.dtsi in petalinux projects).
+5. Compile the pl.dtbo file as described in the [DTO/ README.md](DTO/README.md).
+6. make sure the .bin file name matches the "firmware-name" in pl.dtsi.
+6. Transfer the .bit.bin and .dtbo files to the Zybo.
+7. Load the DTO using fpgautil (or manually with configfs if that is preffered):
+```bash
+fpgautil -b <your bitstream> -o <your .dtbo> -f Full
+```
+ if it fails due to "device tree already found in live tree" you can reset the device tree by:
+ ```bash
+rmdir /configfs/device-tree/overlays/full
+```
+then calling fpgautil again.
 
-# Audio Monitor functionality (Device Tree Overaly)
+confirm successfull application by calling ```dmesg```.
+
+# Audio Monitor functionality (DTO)
 To enable the non-default Audio Monitor functionality of this image, Device Tree Overlay (DTO) is used. With DTO, the necessary fpga bitstream and device tree fragment is loaded. More information on this can be found on [this Xilinx confluence page](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841645/Solution+Zynq+PL+Programming+With+FPGA+Manager).
 
 ## Usage
 use fpgautil to load the bitstream and DTO:
 ```bash
-fpgautil -b /lib/firmware/miniproject_z7-20/miniproject_top.bit.bin -o /lib/firmware/miniproject_z7-20/system-user.dtbo -f Full
+fpgautil -b /lib/firmware/miniproject_z7-20/miniproject_top.bit.bin -o /lib/firmware/miniproject_z7-20/system-user-audio-z7-20.dtbo -f Full
 ```
+
+note: the default .dtbo files found in /lib/firmare/ directories are missing necessary modifications. Use the system-user-*.dtbo files instead
 
 to reset the live tree to default:
 ```bash
@@ -200,5 +242,34 @@ rmdir full
 ```
 
 
+or
+```bash
+fpgautil -R
+```
+
+
+call audiomonitor or audiomonitor-local
+
+Note: currently audiomonitor (built from git source) does not work, use audiomonitor-local
+
+### Reverting
+To revert back to the default bitstream and DTO
+
+```bash
+fpgautil -b /lib/firmware/top_level_wrapper_Z7-20/top_level_wrapper.bit.bin -o /usr/firmware/system-user-default-z7-20.dtbo -f Full
+```
+
 ## Development
 For how to generate a .DTBO and .bit file read the [README.md in ./DTO/](DTO/README.md)
+
+# ROS
+Robot operating system - Work in progress
+
+## Work done so far
+* The meta-ros layer is available as a submodule of this repository
+* Attempts to add the required layers failed during petalinux-config stage.
+
+## Resources
+[Xilinx forum discussion](https://forums.xilinx.com/t5/Embedded-Linux/Adding-ROS-to-Petalinux-which-recipes-to-include/td-p/1187716)
+
+
